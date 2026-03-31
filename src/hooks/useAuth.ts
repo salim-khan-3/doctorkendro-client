@@ -1,4 +1,3 @@
-
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
@@ -19,11 +18,12 @@ export const useAuth = () => {
         setAuth(response.data.user, response.data.accessToken)
         toast.success('Login successful!')
 
-        // Redirect based on role
         const role = response.data.user.role
-        if (role === 'PATIENT') router.replace('/patient')
-        else if (role === 'DOCTOR') router.replace('/doctor')
-        else if (role === 'SUPER_ADMIN') router.replace('/admin')
+        setTimeout(() => {
+          if (role === 'PATIENT') router.replace('/patient')
+          else if (role === 'DOCTOR') router.replace('/doctor')
+          else if (role === 'SUPER_ADMIN') router.replace('/admin')
+        }, 500)
       }
     },
     onError: (error: any) => {
@@ -78,9 +78,6 @@ export const useAuth = () => {
     isLoggingOut: logoutMutation.isPending,
   }
 }
-
-
-
 
 
 
