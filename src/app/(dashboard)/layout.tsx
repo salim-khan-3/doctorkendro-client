@@ -1,6 +1,8 @@
 'use client'
 
-import Navbar from '@/components/common/Navbar'
+import Navbar from "@/components/common/Navbar/Navbar"
+
+
 
 export default function DashboardLayout({
   children,
@@ -8,7 +10,7 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <main>{children}</main>
     </div>

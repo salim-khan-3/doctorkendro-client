@@ -11,6 +11,7 @@ import PartnerSlider from "@/components/Home/PartnerSlider/PartnerSlider";
 import ReviewSlider from "@/components/Home/ReviewSlider/ReviewSlider";
 import ServiceGrid from "@/components/Home/ServiceGrid/ServiceGrid";
 import SymptomsSection from "@/components/Home/SymptomsSection/SymptomsSection";
+import WhyDoctorKendro from "@/components/Home/WhyDoctorKendro/WhyDoctorKendro";
 import WhyMarham from "@/components/Home/WhyDoctorKendro/WhyDoctorKendro";
 // import Navbar from "@/components/layouts/Navbar/Navbar";
 import React from "react";
@@ -27,7 +28,8 @@ const Home = () => {
       <DiseasesSection></DiseasesSection>
       <ReviewSlider></ReviewSlider>
       <HealthBlogs></HealthBlogs>
-      <WhyMarham></WhyMarham>
+      {/* <WhyMarham></WhyMarham> */}
+      <WhyDoctorKendro></WhyDoctorKendro>
       <PartnerSlider></PartnerSlider>
       <DoctorByCity></DoctorByCity>
       <Footer></Footer>
